@@ -11,23 +11,24 @@
     "format": "prettier --write 'src/**/*.{css,ts,tsx,json,js,jsx}'"
   },
   "dependencies": {
+    "axios": "^1.4.0",
+    "events": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6",
-    "axios": "^1.4.0",
-    "events": "^3.3.0"
+    "reactflow": "^11.9.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
-    "vite": "^4.4.5",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "prettier": "3.0.2"
+    "prettier": "3.0.2",
+    "vite": "^4.4.5"
   }
 }

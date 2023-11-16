@@ -1,0 +1,21 @@
+apply from: "$rootDir/.scripts/gradles/base.gradle"
+apply plugin: "java"
+
+jar {
+    manifestContentCharset 'utf-8'
+    metadataCharset 'utf-8'
+    manifest {
+        attributes "Main-Class": "cn.bytengine.guider.scripts.Main"
+    }
+}
+
+dependencies {
+    implementation project(':base')
+}
+
+tasks.register('copyToLibs', Copy, {
+    into "$buildDir/libs"
+    from configurations.runtimeClasspath
+})
+
+classes.dependsOn copyToLibs

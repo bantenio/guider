@@ -1,0 +1,15 @@
+subprojects {
+    def baseModuleProjects = baseModules.split(',')
+    def subAppProjects = subApps.split(',')
+    if (subAppProjects.contains(project.name)) {
+        apply from: "$rootDir/.scripts/gradles/app.gradle"
+    } else if (baseModuleProjects.contains(project.name)) {
+        apply from: "$rootDir/.scripts/gradles/base.gradle"
+    } else {
+        apply from: "$rootDir/.scripts/gradles/library.gradle"
+    }
+
+    dependencies {
+        implementation group: 'org.slf4j', name: 'jcl-over-slf4j', version: "${Slf4jVersion}"
+    }
+}

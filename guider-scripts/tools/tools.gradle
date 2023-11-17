@@ -1,3 +1,12 @@
+plugins {
+    id 'antlr'
+}
+
 dependencies {
-    runtimeOnly group: 'org.antlr', name: 'antlr4', version: "${Antlr4Version}"
+    antlr group: 'org.antlr', name: 'antlr4', version: "${Antlr4Version}"
+}
+
+generateGrammarSource {
+    maxHeapSize = "64m"
+    arguments += ["-visitor", "-long-messages"]
 }

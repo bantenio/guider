@@ -1,3 +1,0 @@
-dependencies {
-    implementation group: 'org.antlr', name: 'antlr4-tool', version: "${Antlr4Version}"
-}

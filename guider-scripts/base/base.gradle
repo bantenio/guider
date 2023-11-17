@@ -1,0 +1,3 @@
+dependencies {
+    api group: 'org.antlr', name: 'antlr4-runtime', version: "${Antlr4Version}"
+}
